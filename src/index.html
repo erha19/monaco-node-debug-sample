@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+</head>
+
+<body>
+	<h2>Monaco Debug Adapter Server Node.js Sample</h2>
+	<div id="container" style="width:600px;height:300px;border:1px solid #ddd"></div>
+
+	<h3>Console</h3>
+	<div id="console">
+		<div class="input">
+			<input id='expr' type="text">
+			<button id='evaluate'>Run</button>
+		</div>
+		<div class="output" style="width:600px;height:100px;border:1px solid #ddd; margin-top: 20px;">
+			
+		</div>
+	</div>
+
+	<div class="operate">
+		<button id="run">Run</button>
+		<button id="continue">Continue</button>
+		<button id="next">Next</button>
+		<button id="stepIn">StepIn</button>
+		<button id="stepOut">StepOut</button>
+		<button id="restart">Restart</button>
+	</div>
+
+	<div class="threads">
+		<div class="title">THREADS</div>
+		<div class="body"></div>
+	</div>
+
+	<div class="callstack">
+		<div class="title">CALL STACK</div>
+		<div class="body"></div>
+	</div>
+	<script src="main.bundle.js"></script>
+</html>
+
+<style>
+.operate {
+	position: absolute;
+	width: 346px;
+	padding: 0 5px;
+	border-radius: 5px;
+	height: 26px;
+	top: 73px;
+	right: 50px;
+	border:1px solid #ddd;
+	background: #fff;
+}
+.threads {
+	position: absolute;
+  width: 356px;
+  height: 100px;
+  overflow-y: scroll;
+  font-size: 12px;
+  top: 113px;
+  right: 50px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.threads .title {
+	text-indent: 10px;
+	height: 28px;
+	line-height: 28px;
+	border-bottom: 1px solid #ddd;
+	font-size: 12px;
+	color:#615f5f;
+}
+.threads .body {
+	padding: 5px;
+}
+
+.callstack {
+	position: absolute;
+  width: 356px;
+  height: 200px;
+  overflow-y: scroll;
+  font-size: 12px;
+  top: 223px;
+  right: 50px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+.callstack .title {
+	text-indent: 10px;
+	height: 28px;
+	line-height: 28px;
+	border-bottom: 1px solid #ddd;
+	font-size: 12px;
+	color:#615f5f;
+}
+.callstack .body {
+	padding: 5px;
+}
+
+.output {
+	overflow-y: scroll;
+	font-size: 12px;
+}
+</style>
